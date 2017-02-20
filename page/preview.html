@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>预览</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/dist/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../static/css/preview.css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="../lib/dist/js/html5shiv.js"></script>
+      <script src="../lib/dist/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+      <div class="preview-container">
+          <header class="clearfix">
+              <div class="p-v pull-left">
+                  <div class="p-logo pull-left"></div>
+                  <div class="p-text pull-right">
+                      <div class="p-cn">云 ▪ 建站通</div>
+                      <div class="p-en">CLOUD&nbsp;&nbsp;&nbsp;SITE</div>
+                  </div>
+              </div>
+              <div class="p-alink pull-right">
+                    <a href="./form.html">使用模板</a>
+              </div>
+          </header>
+          <div class="container-body">
+              <iframe id="main" src="./control-no-panel.html" width="100%" height="" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
+          </div>
+      </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../lib/plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $("#main").load(function(){
+            var frame = document.getElementById('main'),
+                win = frame.contentWindow,
+                doc = win.document,
+                html = doc.documentElement,
+                body = doc.body;
+
+                // 获取高度
+                var height = Math.max( body.scrollHeight, body.offsetHeight,
+                    html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+                frame.setAttribute('height', height);
+        });
+    </script>
+  </body>
+</html>

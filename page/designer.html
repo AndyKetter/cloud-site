@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>设计器</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+<!--Style-->
+<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/AdminLTE.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/skins/skin-ivt-light.min.css">
+<link rel="stylesheet" href="../static/css/init.css">
+<link rel="stylesheet" href="../static/css/designer.css">
+<link rel="stylesheet" href="../static/css/Tiny-editor.css">
+<script type="text/javascript">
+    var api_url = "{url('manage/design/ajaxinfo',array('siteid'=>$msiteid,'dir'=>$dir,'pagename'=>$pagename))}";
+    var post_url = "{url('manage/design/save',array('dir'=>$dir,'pagename'=>$pagename))}";
+    var upload_url = "";
+</script>
+<!--文件上传样式和js-->
+<link rel="stylesheet" href="../lib/diyUpload/css/webuploader.css">
+<link rel="stylesheet" href="../lib/diyUpload/css/diyUpload.css">
+
+<!--[if lt IE 9]>
+<script src="../lib/dits/js/html5shiv.min.js"></script>
+<script src="../lib/dits/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="hold-transition skin-ivt-light sidebar-mini">
+	<div class="container-d">
+		<div class="designer-head clearfix">
+			<div class="d-logo pull-left"></div>
+			<div class="d-select pull-left clearfix">
+				<span class="pull-left copy-icon"></span>
+				<div class="" id="JS_select"></div>
+				<select class="form-control pull-left" >
+				  <option>首页</option>
+				</select>
+				<div class="ship-list">
+					<div class="create-page">
+						<div class="create-page-btn tc">
+							<button class="btn btn-info" id="JS_create">新建页面</button>
+						</div>
+					</div>
+					<div class="drap-list">
+						<div class="dd">
+							<ol class="dd-list">
+								<li class="dd-item dd3-item" data-id="1">
+									<div class="dd-handle dd3-handle"></div>
+									<div class="dd3-content" data-url="">网站首页</div>
+								</li>
+								<li class="dd-item dd3-item" data-id="2">
+									<div class="dd-handle dd3-handle"></div>
+									<div class="dd3-content" data-url="">关于我们</div>
+									<!-- <ol class="dd-list">
+										<li class="dd-item dd3-item" data-id="3">
+											<div class="dd-handle dd3-handle">Drag</div>
+											<div class="dd3-content">公司简介</div>
+										</li>
+										<li class="dd-item dd3-item" data-id="4">
+											<div class="dd-handle dd3-handle">Drag</div>
+											<div class="dd3-content">团队介绍</div>
+										</li>
+										<li class="dd-item dd3-item" data-id="5">
+											<div class="dd-handle dd3-handle">Drag</div>
+											<div class="dd3-content">大事记</div>
+										</li>
+									</ol> -->
+								</li>
+								<li class="dd-item dd3-item" data-id="3">
+									<div class="dd-handle dd3-handle"></div>
+									<div class="dd3-content" data-url="">新闻中心</div>
+								</li>
+								<li class="dd-item dd3-item" data-id="4">
+									<div class="dd-handle dd3-handle"></div>
+									<div class="dd3-content" data-url="">产品中心</div>
+								</li>
+								<li class="dd-item dd3-item" data-id="5">
+									<div class="dd-handle dd3-handle"></div>
+									<div class="dd3-content" data-url="">联系我们</div>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="d-b pull-right clearfix">
+				<div class="d-save d-btn pull-right"><img src="../static/images/save.png" alt="save">保存</div>
+				<div class="d-preview d-btn pull-right"><img src="../static/images/preview.png" alt="save">预览</div>
+			</div>
+			<div class="d-r pull-right clearfix">
+				<div class="d-black d-c pull-right"></div>
+				<div class="d-white d-c pull-right"></div>
+			</div>
+		</div>
+		<div class="editor">
+			<h1>设计器</h1>
+            <div class="editor-wrap container-fluid">
+                <div class="row">
+                    <div id="tabPlugin" class="tabPlugin col-md-8">
+    			    <ul id="tabControls">
+    			        <li class="JS_Tiny_html">HTML</li>
+    			        <li class="JS_Tiny_css">CSS</li>
+    			        <li class="JS_Tiny_js">JavaScript</li>
+    			        <!-- <li onclick="Tiny.tab(4);Tiny.run()" id="resultTab">Result</li> -->
+    			    </ul>
+    			    <!-- <a class="run button" onclick="Tiny.run()">Run</a> -->
+    			    <!-- <a class="save button" onclick="Tiny.save()">Save</a> -->
+    			    <!-- <a class="full button" onclick="Tiny.fullScreen()">Full-Screen</a> -->
+    			    <!-- <a class="dock button" onclick="Tiny.dockMode()" id="dockButton">Dock-Mode</a> -->
+    			    <a class="live button hide" onclick="Tiny.liveMode()" id="liveButton">live-Mode</a>
+    			    <select name="" id="theme" class="hide"></select>
+    			    <div class="tabContainer"><pre id='html' style="font-size: 16px;"></pre></div>
+
+    			    <div class="tabContainer"><pre id= 'css' style="font-size: 16px;"></pre></div>
+    			    <div class="tabContainer">
+    			        <pre id='js' style="font-size: 16px;"></pre>
+    			    </div>
+    			    <div class="tabContainer" id="dockIframe">
+    			        <div class="split-line" id="splitLine"></div>
+    			        <iframe class="iframe" id="iframe" sandbox="allow-forms allow-popups allow-scripts allow-same-origin allow-modals" name="iframe" frameborder="0">
+    			        </iframe>
+    			    </div>
+    			</div>
+                <div class="col-md-4">
+                    <div class="upload">
+                        <div id="upload">
+                            <div id="as" ></div>
+                        </div>
+                    </div>
+                    <div class="img-container">
+                        <ul class="list-group img-list">
+                          <li class="list-group-item">图片列表</li>
+                        </ul>
+                    </div>
+                </div>
+    			</div>
+            </div>
+		</div>
+		<!--main-footer-->
+		<footer class="main-footer">
+			<div class="pull-right hidden-xs">iDvert Frame ver 1.0</div>
+			<strong>Copyright &copy; 2016 <a href="#">iDvert</a>.</strong> All rights reserved.
+		</footer>
+		<!--/main-footer-->
+	</div>
+
+	<!-- Button trigger modal -->
+	<div class="modal fade modal-warning bs-example-modal-lg" id="warning-modal" tabindex="-1" role="dialog" aria-labelledby="warning-modal-label" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="myModalLabel">新建页面</h4>
+				</div>
+				<div class="modal-body">
+					<div class="nav-tabs-custom tab-default">
+						<ul class="nav nav-pills">
+							<li class="active"><a href="#tab_1" data-toggle="tab">单页模板</a></li>
+							<!-- <li><a href="#tab_2" data-toggle="tab">空白模板</a></li> -->
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane active" id="tab_1">
+								<!-- <div class="page-template">
+									<div class="template-list">
+										<div class="t-wrap clearfix">
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template.png" alt="template">
+											</div>
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template.png" alt="template">
+											</div>
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template.png" alt="template">
+											</div>
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template.png" alt="template">
+											</div>
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template.png" alt="template">
+											</div>
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template.png" alt="template">
+											</div>
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template.png" alt="template">
+											</div>
+
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template2.png" alt="template">
+											</div>
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template2.png" alt="template">
+											</div>
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template2.png" alt="template">
+											</div>
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template2.png" alt="template">
+											</div>
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template2.png" alt="template">
+											</div>
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template2.png" alt="template">
+											</div>
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template2.png" alt="template">
+											</div>
+
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template3.png" alt="template">
+											</div>
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template3.png" alt="template">
+											</div>
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template3.png" alt="template">
+											</div>
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template3.png" alt="template">
+											</div>
+											<div class="template-list-img pull-left">
+												<img src="../static/images/template3.png" alt="template">
+											</div>
+
+										</div>
+
+									</div>
+									<div class="control-icon tc mt-20">
+										<span class="icon-sp active" data-num="1"></span>
+										<span class="icon-sp" data-num="2"></span>
+										<span class="icon-sp" data-num="3"></span>
+									</div>
+								</div> -->
+								<div class="page-from">
+									<form class="form-horizontal" role="form" action="test.php" method="get">
+									  <div class="form-group mt-20 pb-20 page-name">
+									    <label class="col-sm-1 control-label" for="site-name">页面名称</label>
+									    <div class="col-sm-10">
+                                            <div class="input-group">
+                                              <input type="text" class="form-control" id="site-name" placeholder="">
+                                              <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button">.html</button>
+                                              </span>
+                                            </div>
+									    </div>
+
+									  </div>
+                                      <div class="form-group">
+                                          <label class="col-sm-1 control-label" for="site-title">页面title</label>
+                                          <div class="col-sm-10">
+                                              <input class="form-control" type="text" id="site-title" placeholder="">
+                                          </div>
+                                      </div>
+									  <div class="form-group">
+										<label class="col-sm-1 control-label" for="site-keywords">页面关键字</label>
+  									    <div class="col-sm-10">
+  									      <input class="form-control" type="text" id="site-keywords" placeholder="">
+  									    </div>
+									  </div>
+									  <div class="form-group">
+										<label class="col-sm-1 control-label" for="site-describe">页面描述</label>
+  									    <div class="col-sm-10">
+											<textarea class="form-control" id="site-describe" rows="3"></textarea>
+  									    </div>
+									  </div>
+									</form>
+								</div>
+							</div>
+							<!-- <div class="tab-pane" id="tab_2">
+								空白模板
+							</div> -->
+						</div>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-info" id="JS-submit">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!--save success trigger modal -->
+	<div class="modal fade modal-warning bs-example-modal-sm" id="JS-save-success" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title">温馨提示</h4>
+				</div>
+				<div class="modal-body">
+                    保存成功
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-info" data-dismiss="modal">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="../lib/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/dist/js/app.min.js"></script>
+<script src="../lib/dist/js/ivt.js"></script>
+<script src="../static/js/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="../static/js/Tiny-editor.js"></script>
+<script src="../lib/plugins/nestable/jquery.nestable.js"></script>
+<script src="../lib/diyUpload/js/webuploader.html5only.min.js"></script>
+<script src="../lib/diyUpload/js/diyUpload.js"></script>
+<script src="../static/js/designer.min.js"></script>
+</body>
+</html>

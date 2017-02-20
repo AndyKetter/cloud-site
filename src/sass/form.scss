@@ -1,0 +1,34 @@
+header{
+    height: 50px;
+    border: 1px solid #ddd;
+    padding-left: 80px;
+    padding-right: 100px;
+    width: 100%;
+    background-color: #fff;
+    .p-v{
+        height: inherit;
+        .p-logo{
+            width: 32px;
+            height: 20px;
+            margin-top: 15px;
+            background: #fff url('../images/preview-logo.png') center 0 no-repeat;
+        }
+        .p-text{
+            color: #F2A654;
+            margin-left: 15px;
+            margin-top: 4px;
+            .p-cn{
+                font-size: 18px;
+            }
+            .p-en{
+                color: rgba(242, 166, 84, 0.68);
+                font-size: 12px;
+            }
+        }
+    }
+}
+.form{
+    margin: 20px auto;
+    width: 1200px;
+    border: 1px solid #ddd;
+}

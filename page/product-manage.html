@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>栏目管理</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <!--Style-->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../lib/dist/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../lib/dist/css/AdminLTE.min.css" />
+    <link rel="stylesheet" href="../lib/dist/css/skins/skin-ivt-light.min.css">
+    <link rel="stylesheet" href="../static/css/init.css">
+    <link rel="stylesheet" href="../static/css/product-manage.css">
+    <!--[if lt IE 9]>
+<script src="../lib/dits/js/html5shiv.min.js"></script>
+<script src="../lib/dits/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="hold-transition skin-ivt-light sidebar-mini">
+    <!--content-wrapper-->
+    <!-- <div class="content-wrapper"> -->
+    <!--content-header-->
+    <section class="content-header">
+        <!--content-header-title-->
+        <h1>产品管理</h1>
+        <!--/content-header-title-->
+        <!---breadcrumb-->
+        <ol class="breadcrumb">
+            <li><a href="#"> 当前位置</a></li>
+            <li class="active">控制面板 > 产品管理 > 产品列表</li>
+        </ol>
+        <!---/breadcrumb-->
+    </section>
+    <!--/content-header-->
+    <!--content-->
+    <section class="content">
+        <div class="box box-primary no-panel column-panel">
+            <div class="box-header b-b clearfix">
+                <h3 class="box-title pull-left lh-md">产品列表</h3>
+                <div class="pull-left choose-pro">
+                    <select class="form-control">
+                        <option>全部栏目</option>
+                        <option>2</option>
+                    </select>
+                </div>
+                <div class="input-group pull-left" style="width: 200px;margin-left: 10px;">
+                    <input type="text" class="form-control" placeholder="">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                </div>
+                <button class="btn btn-sm btn-warning pull-right" id="add-product">添加产品</button>
+            </div>
+            <div class="box-body no-padding">
+                <!--table-->
+                <table class="table table-striped" id="column-table">
+                    <thead>
+                        <tr>
+                            <th><input class="select-all" type="checkbox" name="" value=""></th>
+                            <th>ID</th>
+                            <th>图片</th>
+                            <th>标题</th>
+                            <th>更新日期</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input class="select-items" type="checkbox" name="" value=""></td>
+                            <td>10</td>
+                            <td><img src="../static/images/favicon.png" alt=""></td>
+                            <td>白日纵歌：美女摄影师的随性青春之舞</td>
+                            <td>2016-06-22 15:13:48</td>
+                            <td>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-info">预览</a>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-danger Js-delete">删除</a>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-success">编辑</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input class="select-items" type="checkbox" name="" value=""></td>
+                            <td>10</td>
+                            <td><img src="../static/images/favicon.png" alt=""></td>
+                            <td>白日纵歌：美女摄影师的随性青春之舞</td>
+                            <td>2016-06-22 15:13:48</td>
+                            <td>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-info">预览</a>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-danger Js-delete">删除</a>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-success">编辑</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input class="select-items" type="checkbox" name="" value=""></td>
+                            <td>10</td>
+                            <td><img src="../static/images/favicon.png" alt=""></td>
+                            <td>白日纵歌：美女摄影师的随性青春之舞</td>
+                            <td>2016-06-22 15:13:48</td>
+                            <td>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-info">预览</a>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-danger Js-delete">删除</a>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-success">编辑</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--/table-->
+                <div class="clearfix">
+                    <div class="pull-left" style="margin-top: 20px;margin-left: 20px;">
+                        <button type="button" class="btn btn-default" id="JS-delete-all">刪除</button>
+                    </div>
+                    <div class="pagination-div tc pull-right">
+                        <ul class="pagination separated">
+                            <li class="disabled"><a href="#fakelink">首页</a></li>
+                            <li class="disabled"><a href="#fakelink">上一页</a></li>
+                            <li class="active"><a href="#fakelink">1</a></li>
+                            <li><a href="#fakelink">2</a></li>
+                            <li><a href="#fakelink">3</a></li>
+                            <li><a href="#fakelink">...</a></li>
+                            <li><a href="#fakelink">15</a></li>
+                            <li><a href="#fakelink">下一页</a></li>
+                            <li><a href="#fakelink">尾页</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--upload-modal-->
+    <div class="modal fade modal-primary" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="primary-modal-label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-sm rule-pop-a br-2" style="overflow: hidden">
+            <div class="modal-content pt-10">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-3 text-right">
+                            <i class="fa fa-3x text-danger fa-exclamation-circle"></i>
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="modal-message">上传中</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取 消</button>
+                    <button type="button" class="btn btn-danger btn-sm">确 定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../lib/plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/dist/js/app.min.js"></script>
+    <script src="../lib/dist/js/ivt.js"></script>
+    <script src="../static/js/product-manage.min.js"></script>
+</body>
+
+</html>

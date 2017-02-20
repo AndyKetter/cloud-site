@@ -1,0 +1,37 @@
+/* Color Box */
+.color-box { padding:5px; border-radius:2px; border:1px solid #ddd;}
+.color-box .color-box-block { clear:both; margin-bottom:5px; border-radius:2px; line-height:35px; text-align:center; color:#fff;}
+.color-box .color-box-title { text-align:center; font-size:14px;}
+.color-box .color-box-title h4 { font-size:14px; font-weight:bold;}
+
+.color-box-single { border-radius:2px; line-height:35px; text-align:center; color:#fff; font-size:14px;}
+
+.icon-box-body .fontawesome-icon-list div { margin-bottom:10px; line-height:32px; font-size:14px;}
+.icon-box-body .fontawesome-icon-list div .fa { margin-right:10px; font-size:28px;}
+.icon-box-body .page-header { margin-bottom:10px;}
+
+.show-grid [class^=col-] { padding-top:10px; padding-bottom:10px; border:1px solid #ddd; background-color: #f4f4f4!important;}
+
+.baguetteBox {}
+.baguetteBox a { float:left; display:block; margin-right:10px; margin-bottom:10px; width:280px; height:165px; overflow:hidden;}
+.baguetteBox a img { width:100%;}
+
+/* wookmark */
+.wookmark-list { position:relative; display:block; margin:0 auto; padding:0; width:1160px; list-style:none;}
+.wookmark-list li { float:left; padding:5px; border:1px solid #ddd; background-color:#fff; color:#666; font-size:14px; text-align:center;}
+.wookmark-list li img {}
+.wookmark-list li .wookmark-text-img { opacity:0; filter:alpha(opacity=0);}
+.wookmark-list li .wookmark-text-txt { position:absolute; top:0; left:0; padding:15px; line-height:1.5; color:#666;}
+
+/* sortable */
+.sortable-list li,.sortable-grid li { margin:5px; padding:5px; line-height:22px; border-color:#ddd; background-color:#f4f4f4;}
+.sortable-list li.sortable-placeholder,.sortable-grid li.sortable-placeholder { border-color:#ccc; background-color:#fff;}
+.sortable-list li span { float:left; display:block; margin-right:5px; width:22px; text-align:center;}
+
+.sortable-grid li { float:left; width:82px; height:109px; text-align:center;}
+.sortable-grid li.sortable-placeholder { width:82px; height:109px;}
+
+.connected-default.sortable-list li { background-color:#fafbfb; color:#b6bbbd;}
+.connected-success.sortable-list li { background-color:#ecf5e1; color:#7ea552;}
+.connected-info.sortable-list li { background-color:#ccf2fc; color:#009abf;}
+.connected-danger.sortable-list li { background-color:#fee1e1; color:#c75353;}

@@ -1,0 +1,115 @@
+$xxl-size:      50px;
+$xl-size:       30px;
+$lg-size:       20px;
+$md-size:       15px;
+$sm-size:       10px;
+$xs-size:       5px;
+
+.m-l-n-xxl { margin-left: -$xxl-size; }
+.m-r-n-xxl { margin-right: -$xxl-size; }
+.m-t-n-xxl { margin-top: -$xxl-size; }
+.m-b-n-xxl { margin-bottom: -$xxl-size; }
+
+.m-l-n-xl { margin-left: -$xl-size; }
+.m-r-n-xl { margin-right: -$xl-size; }
+.m-t-n-xl { margin-top: -$xl-size; }
+.m-b-n-xl { margin-bottom: -$xl-size; }
+
+.m-l-n-lg { margin-left: -$lg-size; }
+.m-r-n-lg { margin-right: -$lg-size; }
+.m-t-n-lg { margin-top: -$lg-size; }
+.m-b-n-lg { margin-bottom: -$lg-size; }
+
+.m-l-n-md { margin-left: -$md-size; }
+.m-r-n-md { margin-right: -$md-size; }
+.m-t-n-md { margin-top: -$md-size; }
+.m-b-n-md { margin-bottom: -$md-size; }
+
+.m-l-n-sm { margin-left: -$sm-size; }
+.m-r-n-sm { margin-right: -$sm-size; }
+.m-t-n-sm { margin-top: -$sm-size; }
+.m-b-n-sm { margin-bottom: -$sm-size; }
+
+.m-l-n-xs { margin-left: -$xs-size; }
+.m-r-n-xs { margin-right: -$xs-size; }
+.m-t-n-xs { margin-top: -$xs-size; }
+.m-b-n-xs { margin-bottom: -$xs-size; }
+
+.title-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 2px;
+    padding: 2px;
+    text-align: center;
+    line-height: 60px;
+    img {
+        vertical-align: middle;
+    }
+}
+.lh-md {
+    line-height: 30px !important;
+}
+
+
+//样式覆盖
+.skin-ivt-light .main-header .logo {
+    background-color: #F2A654;
+    color: #fff;
+    border-bottom: 0 solid transparent;
+}
+.skin-ivt-light .main-header .logo:hover{
+    background-color: #F2A654;
+}
+.user-image-icon{
+    margin-right: 10px;
+}
+.hidden-xs{
+    margin-right: 10px;
+}
+.back-btn{
+    width: 110px;
+    height: 34px;
+    border: 1px solid #B8B7B7;
+    border-radius: 3px;
+    line-height: 34px;
+    text-align: center;
+    color: #B8B7B7;
+    margin-top: 8px;
+    cursor: pointer;
+}
+.back-btn img{
+    position: relative;
+    right: 8px;
+    top: -1px;
+}
+.box.box-primary {
+    border-top-color: #F2A654;
+}
+.tc{
+    text-align: center;
+}
+.a-common{
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    width: inherit;
+    &:hover{
+        color: #fff;
+    }
+}
+.pagination-div{
+    margin-top: 20px;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #F2A654;
+  border-color: #F2A654;
+}
+
+.modal-primary .modal-header {
+    border-top-color: #F2A654; 
+}

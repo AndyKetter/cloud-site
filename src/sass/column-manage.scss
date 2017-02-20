@@ -1,0 +1,44 @@
+.tl-error{
+    text-align: left !important;
+    color: #F96868;
+}
+#add-column{
+    background-color: #F2A654;
+    border-color: #F2A654;    
+    &:hover{  
+        background-color: rgba(242, 166, 84, 0.85);
+    }  
+}
+#JS-delete-all{
+    margin: 20px;
+}
+.column-panel{
+    padding-bottom: 40px; 
+}
+.space{
+    display: inline-block;
+    width: 50px;
+}
+#column-table {
+    text-align: center;
+    tr:last-child{
+        border-bottom: 1px #ddd solid;
+    }
+    th{
+        text-align: center; 
+    }
+    tr{
+        td:last-child{
+            width: 400px;
+        }
+        th:last-child{
+            width: 400px;
+        }
+        td:nth-child(3){
+            text-align: left;
+        }
+        th:nth-child(3){
+            text-align: left;
+        }
+    }
+}

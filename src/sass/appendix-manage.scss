@@ -1,0 +1,29 @@
+#upload-btn{
+    background-color: #F2A654;
+    border-color: #F2A654;    
+    &:hover{ 
+        background-color: rgba(242, 166, 84, 0.85);
+    }  
+}
+
+.column-panel{
+    padding-bottom: 40px; 
+}
+
+#column-table {
+    text-align: center;
+    tr:last-child{
+        border-bottom: 1px #ddd solid;
+    }
+    th{
+        text-align: center; 
+    }
+    tr{
+        td:nth-child(3){
+            text-align: left;
+        }
+        th:nth-child(3){
+            text-align: left;
+        }
+    }
+}

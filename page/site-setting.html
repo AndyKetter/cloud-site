@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>控制面板</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+<!--Style-->
+<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/AdminLTE.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/skins/skin-ivt-light.min.css">
+<link rel="stylesheet" href="../static/css/init.css">
+<link rel="stylesheet" href="../static/css/site-setting.css">
+<!--[if lt IE 9]>
+<script src="../lib/dits/js/html5shiv.min.js"></script>
+<script src="../lib/dits/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="hold-transition skin-ivt-light sidebar-mini">
+<!--content-wrapper-->
+	<!--content-header-->
+	<section class="content-header">
+		<!--content-header-title-->
+		<h1>网站设置</h1>
+		<!--/content-header-title-->
+
+		<!---breadcrumb-->
+		<ol class="breadcrumb">
+			<li> 当前位置</li>
+			<li><a href="#"> 控制面板</a></li>
+			<li><a href="#"> 站点设置</a></li>
+			<li class="active"><a href="#"> 网站设置</a></li>
+		</ol>
+		<!---/breadcrumb-->
+	</section>
+	<!--/content-header-->
+
+	<!--content-->
+	<section class="content cloud-right-container p-15">
+        <div class="box box-primary box-company">
+			<form class="form-horizontal container-sm-fluid" id="form-1" action="">
+				<div class="box-header b-b m-l-n-xs m-r-n-xs">
+					<h3 class="box-title">基础设置</h3>
+				</div>
+				<div class="box-body">
+					<div class="form-group">
+						<label class="col-sm-2 control-label">站点名称</label>
+						<div class="col-sm-4">
+							<input type="text" name="name" class="form-control" />
+						</div>
+						<div class="col-sm-6">
+							<div class="Validform_checktip help-block"></div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">标题栏图标</label>
+						<div class="col-sm-6 clearfix">
+							<div class="pull-left title-icon b-a mr-10 ">
+								<img src="../src/images/u2.png" alt="">
+							</div>
+							<div class="pull-left">
+								<button class="btn btn-info" type="button">
+									<i class="fa fa-upload"></i>
+									上传图片
+								</button>
+								<br>
+								<p class="mt-10 mb-0">支持尺寸：16×16 像素图标图片，支持图标图像格式：png、gif、jpg</p>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="help-block Validform_checktip"></div>
+						</div>
+					</div>
+					<hr class="m-r-n-md m-l-n-md">
+					<div class="form-group">
+						<label class="col-sm-2 control-label">公司名称</label>
+						<div class="col-sm-4">
+							<input type="text" name="companyName" class="form-control" />
+						</div>
+						<div class="col-sm-6">
+							<div class="help-block Validform_checktip"></div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">联系人</label>
+						<div class="col-sm-4">
+							<input type="text" name="contactName" class="form-control" />
+						</div>
+						<div class="col-sm-6">
+							<div class="help-block Validform_checktip"></div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">联系电话</label>
+						<div class="col-sm-4">
+							<input type="text" name="contactPhone" class="form-control" />
+						</div>
+						<div class="col-sm-6">
+							<div class="help-block Validform_checktip"></div>
+						</div>
+					</div>
+				</div>
+				<div class="box-header b-b b-t m-r-n-xs m-l-n-xs mb-10">
+					<h3 class="box-title">SEO 设置</h3>
+				</div>
+				<div class="box-body">
+					<div class="form-group">
+						<label class="col-sm-2 control-label">站点名称</label>
+						<div class="col-sm-4">
+							<input type="text" name="seoSiteName" class="form-control" />
+						</div>
+						<div class="col-sm-6">
+							<div class="Validform_checktip help-block"></div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">关键词</label>
+						<div class="col-sm-4">
+							<input type="text" name="keyword" class="form-control" />
+						</div>
+						<div class="col-sm-6">
+							<div class="help-block Validform_checktip"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">站点描述</label>
+						<div class="col-sm-8">
+							<textarea type="text" name="siteDescription" class="form-control"> </textarea>
+						</div>
+						<div class="col-sm-2">
+							<div class="help-block Validform_checktip"></div>
+						</div>
+					</div>
+					<hr class="m-r-n-md m-l-n-md">
+					<div class="form-group">
+						<label class="col-sm-2 control-label"></label>
+						<div class="col-sm-8">
+							<button class="btn-info btn pull-right pl-30 pr-30">提交</button>
+						</div>
+						<div class="col-sm-2">
+						</div>
+					</div>
+				</div>
+			</form>
+        </div>
+	<!--/content-->
+
+</div>
+<!--/content-wrapper-->
+<!-- Script -->
+<script src="../lib/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/dist/js/app.min.js"></script>
+<script src="../lib/dist/js/ivt.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>域名管理</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+<!--Style-->
+<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/AdminLTE.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/skins/skin-ivt-light.min.css">
+<link rel="stylesheet" href="../static/css/init.css">
+<link rel="stylesheet" href="../static/css/site-setting.css">
+<!--[if lt IE 9]>
+<script src="../lib/dits/js/html5shiv.min.js"></script>
+<script src="../lib/dits/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="hold-transition skin-ivt-light sidebar-mini">
+<!--content-wrapper-->
+	<!--content-header-->
+	<section class="content-header">
+		<!--content-header-title-->
+		<h1>域名管理</h1>
+		<!--/content-header-title-->
+
+		<!---breadcrumb-->
+		<ol class="breadcrumb">
+			<li> 当前位置</li>
+			<li><a href="#"> 控制面板</a></li>
+			<li><a href="#"> 站点设置</a></li>
+			<li class="active"><a href="#"> 域名管理</a></li>
+		</ol>
+		<!---/breadcrumb-->
+	</section>
+	<!--/content-header-->
+
+	<!--content-->
+	<section class="content cloud-right-container p-15">
+        <div class="box box-primary box-company">
+            <div class="box-header b-b clearfix">
+                <h3 class="box-title pull-left lh-md">域名列表</h3>
+                <button class="btn btn-sm btn-primary pull-right" data-toggle="modal" data-target="#bindDomainModal">绑定域名</button>
+            </div>
+            <div class="box-body pl-0 pr-0">
+                <table class="table table-hasbtn table-hover">
+                    <thead>
+                        <tr>
+                            <th class="pl-15 w-xl">域名</th>
+                            <th>域名状态</th>
+                            <th>绑定时间</th>
+                            <th style="width:150px;" class="text-center">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="b-b b-t">
+                        <tr>
+                            <td class="pl-15 w-xl">
+                                esmtong.cn
+                            </td>
+                            <td>
+                                <span class="label label-info">解析中</span>
+                            </td>
+                            <td>2016-12-25</td>
+                            <td class="text-center">
+                                <button class="btn btn-danger btn-sm pl-20 pr-20" data-toggle="modal" data-id="1" data-target="#removeModal">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pl-15 w-xxl">
+                                esmtong.net
+                            </td>
+                            <td>
+                                <span class="label label-danger">解析失败</span>
+                            </td>
+                            <td>2016-12-25</td>
+                            <td class="text-center">
+                                <button class="btn btn-danger btn-sm pl-20 pr-20" data-toggle="modal" data-id="2" data-target="#removeModal">删除</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="pl-15 w-xxl">
+                                esmtong.net
+                            </td>
+                            <td>
+                                <span class="label label-info">解析中</span>
+                            </td>
+                            <td>2016-12-25</td>
+                            <td class="text-center">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+	</section>
+	<!--/content-->
+
+    <!--modal-primary-->
+    <div class="modal fade modal-primary" id="bindDomainModal" tabindex="-1" role="dialog" aria-labelledby="primary-modal-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal container-sm-fluid p-0" id="form-1" onsubmit="checkDomain();return false;" name="domainForm" action="">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">绑定域名</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row pt-15">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">域名</label>
+                                <div class="col-sm-7">
+                                    <input type="text" id="domain" placeholder="请输入域名" name="domain" class="form-control" />
+                                    <span class="text-danger text-sm" id="domainError">
+
+                                    </span>
+                                </div>
+                                <div class="col-sm-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-info">确定</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--/modal-primary-->
+    <div class="modal fade modal-primary" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="primary-modal-label" aria-hidden="true">
+		<div class="modal-dialog modal-sm rule-pop-a br-2" style="overflow: hidden">
+			<div class="modal-content pt-10">
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-3 text-right">
+							<i class="fa fa-3x text-danger fa-exclamation-circle"></i>
+						</div>
+						<div class="col-sm-8">
+							<p>是否确认删除该条信息？</p>
+							<p class="text-sm">请注意删除后，该信息将不可恢复</p>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer text-center">
+					<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取 消</button>
+					<a class="btn btn-danger btn-sm" id="sureDelete" href="index.html">确 定</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--/content-wrapper-->
+<!-- Script -->
+<script src="../lib/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/dist/js/app.min.js"></script>
+<script src="../lib/dist/js/ivt.js"></script>
+<script>
+    // $(function() {
+        function checkDomain() {
+            var domain = $('#domain').val();
+            var domainReg = /^(?=^.{3,255}$)[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+$/;
+            if(!domainReg.test(domain)) {
+                $('#domainError').html('域名格式错误');
+                return false;
+            } else {
+                $('#domainError').html('');
+                document.form.domainForm.submit();
+                return true;
+            }
+
+        }
+
+        $('#removeModal').on('show.bs.modal', function (event) {
+            var obj = $(event.relatedTarget);
+            var id = obj.data('id');
+            $('#sureDelete').attr('href', $('#sureDelete').attr('href') + "?id=" + id);
+        })
+    // });
+</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>导航管理</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <!--Style-->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../lib/dist/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../lib/dist/css/AdminLTE.min.css" />
+    <link rel="stylesheet" href="../lib/dist/css/skins/skin-ivt-light.min.css">
+    <link rel="stylesheet" href="../static/css/init.css">
+    <link rel="stylesheet" href="../static/css/navigation-manage.css">
+    <!--[if lt IE 9]>
+<script src="../lib/dits/js/html5shiv.min.js"></script>
+<script src="../lib/dits/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="hold-transition skin-ivt-light sidebar-mini">
+    <!--content-wrapper-->
+    <!-- <div class="content-wrapper"> -->
+    <!--content-header-->
+    <section class="content-header">
+        <!--content-header-title-->
+        <h1>导航管理</h1>
+        <!--/content-header-title-->
+        <!---breadcrumb-->
+        <ol class="breadcrumb">
+            <li><a href="#"> 当前位置</a></li>
+            <li class="active">控制面板 > 导航管理 > 导航列表</li>
+        </ol>
+        <!---/breadcrumb-->
+    </section>
+    <!--/content-header-->
+    <!--content-->
+    <section class="content">
+        <div class="box box-primary no-panel article-panel">
+            <div class="box-header b-b clearfix">
+                <h3 class="box-title pull-left lh-md">导航列表</h3>
+                <button class="btn btn-sm btn-warning pull-right" id="add-article">添加导航</button>
+            </div>
+            <div class="box-body no-padding">
+                <!--table-->
+                <table class="table table-striped" id="article-table">
+                    <thead>
+                        <tr>
+                            <th><input class="select-all" type="checkbox" name="" value=""></th>
+                            <th>ID</th>
+                            <th>导航名称</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input class="select-items" type="checkbox" name="" value=""></td>
+                            <td>10</td>
+                            <td>头部导航</td>
+                            <td>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-info">导航项管理</a>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-danger Js-delete">删除</a>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-success">编辑</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input class="select-items" type="checkbox" name="" value=""></td>
+                            <td>10</td>
+                            <td>头部导航</td>
+                            <td>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-info">导航项管理</a>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-danger Js-delete">删除</a>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-success">编辑</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input class="select-items" type="checkbox" name="" value=""></td>
+                            <td>10</td>
+                            <td>头部导航</td>
+                            <td>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-info">导航项管理</a>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-danger Js-delete">删除</a>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-success">编辑</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--/table-->
+                <div class="clearfix">
+                    <div class="pull-left" style="margin-top: 20px;margin-left: 20px;">
+                        <button type="button" class="btn btn-default" id="JS-delete-all">刪除</button>
+                    </div>
+                    <div class="pagination-div tc pull-right">
+                        <ul class="pagination separated">
+                            <li class="disabled"><a href="#fakelink">首页</a></li>
+                            <li class="disabled"><a href="#fakelink">上一页</a></li>
+                            <li class="active"><a href="#fakelink">1</a></li>
+                            <li><a href="#fakelink">2</a></li>
+                            <li><a href="#fakelink">3</a></li>
+                            <li><a href="#fakelink">...</a></li>
+                            <li><a href="#fakelink">15</a></li>
+                            <li><a href="#fakelink">下一页</a></li>
+                            <li><a href="#fakelink">尾页</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Button trigger modal -->
+    <div class="modal fade modal-primary" id="add-modal" tabindex="-1" role="dialog" aria-labelledby="warning-modal-label"
+        aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">添加导航</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" enctype="multipart/form-data" data-url="">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="column-name">导航名称</label>
+                            <div class="col-sm-8">
+                                <input name="column-name" class="form-control" type="text" placeholder="">
+                            </div>
+                            <label class="col-sm-2 control-label tl-error"></label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-info" id="JS-submit">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--upload-modal-->
+    <div class="modal fade modal-primary" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="primary-modal-label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-sm rule-pop-a br-2" style="overflow: hidden">
+            <div class="modal-content pt-10">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-3 text-right">
+                            <i class="fa fa-3x text-danger fa-exclamation-circle"></i>
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="modal-message">上传中</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取 消</button>
+                    <button type="button" class="btn btn-danger btn-sm">确 定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../lib/plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/dist/js/app.min.js"></script>
+    <script src="../lib/dist/js/ivt.js"></script>
+    <script src="../static/js/navigation-manage.min.js"></script>
+</body>
+
+</html>

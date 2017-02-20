@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>栏目管理</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+	<!--Style-->
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../lib/dist/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../lib/dist/css/AdminLTE.min.css" />
+	<link rel="stylesheet" href="../lib/dist/css/skins/skin-ivt-light.min.css">
+	<link rel="stylesheet" href="../static/css/init.css">
+	<link rel="stylesheet" href="../static/css/column-manage.css">
+	<!--[if lt IE 9]>
+<script src="../lib/dits/js/html5shiv.min.js"></script>
+<script src="../lib/dits/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="hold-transition skin-ivt-light sidebar-mini">
+	<!--content-wrapper-->
+	<!-- <div class="content-wrapper"> -->
+	<!--content-header-->
+	<section class="content-header">
+		<!--content-header-title-->
+		<h1>栏目管理</h1>
+		<!--/content-header-title-->
+		<!---breadcrumb-->
+		<ol class="breadcrumb">
+			<li><a href="#"> 当前位置</a></li>
+			<li class="active">控制面板 > 栏目管理</li>
+		</ol>
+		<!---/breadcrumb-->
+	</section>
+	<!--/content-header-->
+	<!--content-->
+	<section class="content">
+		<div class="box box-primary no-panel column-panel">
+			<div class="box-header b-b clearfix">
+				<h3 class="box-title pull-left lh-md">栏目列表</h3>
+				<button class="btn btn-sm btn-warning pull-right" id="add-column">添加栏目</button>
+			</div>
+			<div class="box-body no-padding">
+				<!--table-->
+				<table class="table table-striped" id="column-table">
+					<thead>
+						<tr>
+							<th><input class="select-all" type="checkbox" name="" value=""></th>
+							<th>ID</th>
+							<th>栏目名称</th>
+							<th>栏目类型</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input class="select-items" type="checkbox" name="" value=""></td>
+							<td>10</td>
+							<td>新闻中心</td>
+							<td class="text-center">文章</td>
+							<td class="text-center">
+								<a href="javascript:void(0);" class="btn btn-xs btn-info">添加子栏目</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-danger Js-delete">删除</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-success">编辑</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input class="select-items" type="checkbox" name="" value=""></td>
+							<td>11</td>
+							<td><span class="space"></span>|--国内新闻</td>
+							<td class="text-center">文章</td>
+							<td class="text-center">
+								<a href="javascript:void(0);" class="btn btn-xs btn-info">添加子栏目</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-danger Js-delete">删除</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-success">编辑</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input class="select-items" type="checkbox" name="" value=""></td>
+							<td>12</td>
+							<td><span class="space"></span>|--国际新闻</td>
+							<td class="text-center">文章</td>
+							<td class="text-center">
+								<a href="javascript:void(0);" class="btn btn-xs btn-info">添加子栏目</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-danger Js-delete">删除</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-success">编辑</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input class="select-items" type="checkbox" name="" value=""></td>
+							<td>101</td>
+							<td><span class="space"></span><span class="space"></span>|--军事</td>
+							<td class="text-center">文章</td>
+							<td class="text-center">
+								<a href="javascript:void(0);" class="btn btn-xs btn-danger Js-delete">删除</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-success">编辑</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input class="select-items" type="checkbox" name="" value=""></td>
+							<td>102</td>
+							<td><span class="space"></span><span class="space"></span>|--娱乐</td>
+							<td class="text-center">文章</td>
+							<td class="text-center">
+								<a href="javascript:void(0);" class="btn btn-xs btn-danger Js-delete">删除</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-success">编辑</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input class="select-items" type="checkbox" name="" value=""></td>
+							<td>20</td>
+							<td>产品中心</td>
+							<td class="text-center">文章</td>
+							<td class="text-center">
+								<a href="javascript:void(0);" class="btn btn-xs btn-info">添加子栏目</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-danger Js-delete">删除</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-success">编辑</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input class="select-items" type="checkbox" name="" value=""></td>
+							<td>21</td>
+							<td><span class="space"></span>|--数码产品</td>
+							<td class="text-center">产品</td>
+							<td class="text-center">
+								<a href="javascript:void(0);" class="btn btn-xs btn-info">添加子栏目</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-danger Js-delete">删除</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-success">编辑</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input class="select-items" type="checkbox" name="" value=""></td>
+							<td>201</td>
+							<td><span class="space"></span><span class="space"></span>|--电脑平板</td>
+							<td class="text-center">产品</td>
+							<td class="text-center">
+								<a href="javascript:void(0);" class="btn btn-xs btn-danger Js-delete">删除</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-success">编辑</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input class="select-items" type="checkbox" name="" value=""></td>
+							<td>202</td>
+							<td><span class="space"></span><span class="space"></span>|--手机</td>
+							<td class="text-center">产品</td>
+							<td class="text-center">
+								<a href="javascript:void(0);" class="btn btn-xs btn-danger Js-delete">删除</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-success">编辑</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input class="select-items" type="checkbox" name="" value=""></td>
+							<td>22</td>
+							<td><span class="space"></span>|--数码配件</td>
+							<td class="text-center">产品</td>
+							<td class="text-center">
+								<a href="javascript:void(0);" class="btn btn-xs btn-info">添加子栏目</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-danger Js-delete">删除</a>
+								<a href="javascript:void(0);" class="btn btn-xs btn-success">编辑</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<!--/table-->
+				<div>
+					<button type="button" class="btn btn-default" id="JS-delete-all">刪除</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/content-->
+	<!-- </div> -->
+	<!--/content-wrapper-->
+	<!-- Script -->
+	<!-- Button trigger modal -->
+	<div class="modal fade modal-primary bs-example-modal-lg" id="add-modal" tabindex="-1" role="dialog" aria-labelledby="warning-modal-label"
+	    aria-hidden="true" style="display: none;">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="myModalLabel">添加栏目</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal" enctype="multipart/form-data" data-url="">
+						<div class="form-group">
+							<label class="col-sm-2 control-label">上级栏目</label>
+							<div class="col-sm-8">
+								<select name="parent-column" class="form-control">
+									<option>作为一级栏目</option>
+									<option>作为二级栏目</option>
+								</select>
+							</div>
+							<label class="col-sm-2 control-label tl-error"></label>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="column-name">栏目名称</label>
+							<div class="col-sm-8">
+								<input name="column-name" class="form-control" type="text" placeholder="">
+							</div>
+							<label class="col-sm-2 control-label tl-error"></label>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">栏目类型</label>
+							<div class="col-sm-8">
+								<button type="button" data-id="" class="btn btn-default choose-btn" style="width: 100px">文章</button>
+								<button type="button" data-id="" class="btn btn-default choose-btn" style="width: 100px;position: relative;right: 5px;">产品</button>
+							</div>
+							<label class="col-sm-2 control-label tl-error"></label>
+						</div>
+						<div class="form-group" style="border-top: 1px solid #ddd;padding-top: 15px;">
+							<label class="col-sm-2 control-label">栏目列表模板</label>
+							<div class="col-sm-8">
+								<select name="column-list-modal" class="form-control">
+									<option>模板-文章列表</option>
+								</select>
+							</div>
+							<label class="col-sm-2 control-label tl-error"></label>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">栏目内容模板</label>
+							<div class="col-sm-8">
+								<select name="column-content-modal" class="form-control">
+									<option>模板-文章内容</option>
+								</select>
+							</div>
+							<label class="col-sm-2 control-label tl-error"></label>
+						</div>
+						<div class="form-group" style="border-top: 1px solid #ddd;padding-top: 15px;">
+							<label class="col-sm-2 control-label" for="column-keys">栏目关键字</label>
+							<div class="col-sm-8">
+								<input name="column-keys" class="form-control" type="text" placeholder="">
+							</div>
+							<label class="col-sm-2 control-label tl-error"></label>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="column-desc">栏目描述</label>
+							<div class="col-sm-8">
+								<textarea name="column-desc" class="form-control" rows="3"></textarea>
+							</div>
+							<label class="col-sm-2 control-label tl-error"></label>
+						</div>
+						<input type="hidden" id="JS_inpt" name="column-type" value="">
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-info" id="JS-submit">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--/modal-primary-->
+    <div class="modal fade modal-primary" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="primary-modal-label" aria-hidden="true">
+		<div class="modal-dialog modal-sm rule-pop-a br-2" style="overflow: hidden">
+			<div class="modal-content pt-10">
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-3 text-right">
+							<i class="fa fa-3x text-danger fa-exclamation-circle"></i>
+						</div>
+						<div class="col-sm-8">
+							<p>是否确认删除该条信息？</p>
+							<p class="text-sm">请注意删除后，该信息将不可恢复</p>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer text-center">
+					<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取 消</button>
+					<button type="button" class="btn btn-danger btn-sm">确 定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../lib/plugins/jQuery/jquery-2.2.3.min.js"></script>
+	<script src="../lib/plugins/jQuery/jquery.form.js"></script>
+	<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../lib/dist/js/app.min.js"></script>
+	<script src="../lib/dist/js/ivt.js"></script>
+	<script src="../static/js/column-manage.min.js"></script>
+</body>
+
+</html>

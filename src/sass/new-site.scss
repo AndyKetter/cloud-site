@@ -1,0 +1,41 @@
+.modal-warning .modal-header {
+    border-top-color: #F2A654;
+}
+.box-header{
+    .box-title{
+        margin-top: 10px;
+    }
+    .c-color{
+
+    }
+    .c-trade{
+        margin-right: 10px;
+    }
+}
+.card>.caption{
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 100%;
+}
+.caption-d{
+    width: 80px;
+    height: 90px;
+    position: absolute;
+    margin: auto;
+    right: 60px;
+    bottom: 0;
+    top: 0;
+    .caption-btn{
+        width: 80px;
+        height: 34px;
+        background-color: gray;
+        line-height: 34px;
+        border-radius: 3px;
+    }
+    .caption-preview{
+        background-color: #F7DA64;
+    }
+    .caption-use{
+        background-color: #F2A654;
+        margin-top: 15px;
+    }
+}

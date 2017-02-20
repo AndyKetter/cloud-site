@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>添加文章</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <!--Style-->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../lib/dist/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../lib/dist/css/AdminLTE.min.css" />
+    <link rel="stylesheet" href="../lib/dist/css/skins/skin-ivt-light.min.css">
+    <link rel="stylesheet" href="../static/css/init.css">
+    <link rel="stylesheet" href="../lib/plugins/wangeditor/dist/css/wangEditor.min.css">
+    <link rel="stylesheet" href="../static/css/add-article.css">
+    <!--[if lt IE 9]>
+<script src="../lib/dits/js/html5shiv.min.js"></script>
+<script src="../lib/dits/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="hold-transition skin-ivt-light sidebar-mini">
+    <!--content-wrapper-->
+    <!-- <div class="content-wrapper"> -->
+    <!--content-header-->
+    <section class="content-header">
+        <!--content-header-title-->
+        <h1>添加文章</h1>
+        <!--/content-header-title-->
+        <!---breadcrumb-->
+        <ol class="breadcrumb">
+            <li><a href="#"> 当前位置</a></li>
+            <li class="active">控制面板 > 文章管理 > 添加文章</li>
+        </ol>
+        <!---/breadcrumb-->
+    </section>
+    <!--/content-header-->
+    <!--content-->
+    <section class="content">
+        <div class="box box-primary no-panel column-panel">
+            <div class="box-header b-b clearfix">
+                <h3 class="box-title pull-left lh-md">添加文章</h3>
+            </div>
+            <div class="box-body no-padding" style="padding-bottom: 30px !important;">
+                <div class="container">
+                    <form class="form-horizontal" enctype="multipart/form-data" data-url="">
+                        <div class="row line-div">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="title-name">标题</label>
+                                    <div class="col-sm-8">
+                                        <input id="title-name" class="form-control" type="text" placeholder="">
+                                    </div>
+                                    <label class="col-sm-2 control-label tl-error"></label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="p-time">发表时间</label>
+                                    <div class="date col-sm-8">
+                                        <input type="text" class="form-control pull-right" id="flatpickr" value="" data-enable-time="true" data-enable-seconds="true"
+                                        />
+                                    </div>
+                                    <label class="col-sm-2 control-label tl-error"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row line-div">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="choose-classify">选择分类</label>
+                                    <div class="col-sm-8">
+                                        <select name="choose-classify" class="form-control">
+                                            <option>默认分类</option>
+                                            <option>默认分类</option>
+                                        </select>
+                                    </div>
+                                    <label class="col-sm-2 control-label tl-error"></label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="keys">关键字</label>
+                                    <div class="col-sm-8">
+                                        <input id="keys" class="form-control" type="text" placeholder="">
+                                    </div>
+                                    <label class="col-sm-2 control-label tl-error"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row line-div">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="choose-classify">封面图</label>
+                                    <div class="col-sm-8">
+                                        <div class="upload-img clearfix">
+                                            <div class="cover pull-left">
+
+                                            </div>
+                                            <div class="pull-left">
+                                                <div class="c-file">
+                                                    <input class="file-inpt" type="file">
+                                                    <button type="button" class="btn btn-primary choose-img">选择图片</button>
+                                                </div>
+                                                <div>
+                                                    <button type="button" class="btn btn-default delete-img">删除图片</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label class="col-sm-2 control-label tl-error"></label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="keys">摘要</label>
+                                    <div class="col-sm-8">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                    <label class="col-sm-2 control-label tl-error"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row line-div">
+                            <div class="col-md-1" style="text-align: right;">
+                                <label class="control-label">详细内容</label>
+                            </div>
+                            <div class="col-md-10">
+                                <div id="editor">
+                                    <p>请输入内容...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row line-div">
+                            <div class="col-md-6"></div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label"></label>
+                                    <div class="date col-sm-8 choose-btn-div">
+                                        <button type="button" id="cancel-btn" class="btn btn-default">取消</button>
+                                        <button type="button" id="save-btn" class="btn btn-info">确定</button>
+                                    </div>
+                                    <label class="col-sm-2 control-label tl-error"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../lib/plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/dist/js/app.min.js"></script>
+    <script src="../lib/dist/js/ivt.js"></script>
+    <script src="../lib/plugins/flatpickr/flatpickr.js"></script>
+    <script src="../lib/plugins/wangeditor/dist/js/wangEditor.min.js"></script>
+    <script src="../static/js/add-article.min.js"></script>
+</body>
+
+</html>

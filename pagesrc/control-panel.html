@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>控制面板</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+<!--Style-->
+<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/AdminLTE.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/skins/skin-ivt-light.min.css">
+<link rel="stylesheet" href="../static/css/init.css">
+<link rel="stylesheet" href="../static/css/control-panel.css">
+<!--[if lt IE 9]>
+<script src="../lib/dits/js/html5shiv.min.js"></script>
+<script src="../lib/dits/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="hold-transition skin-ivt-light sidebar-mini">
+<!--content-wrapper-->
+<div class="content-wrapper ml-0">
+	<!--content-header-->
+	<section class="content-header">
+		<!--content-header-title-->
+		<h1>站点概况</h1>
+		<!--/content-header-title-->
+
+		<!---breadcrumb-->
+		<ol class="breadcrumb">
+			<li><a href="#"> 当前位置</a></li>
+			<li class="active">站点概况</li>
+		</ol>
+		<!---/breadcrumb-->
+	</section>
+	<!--/content-header-->
+
+	<!--content-->
+	<section class="content cloud-right-container p-15">
+        <div class="box box-primary box-company">
+            <div class="pull-left box-left">
+                <img src="../static/images/company.png" alt="company">
+            </div>
+            <div class="pull-right box-right clearfix">
+                <div class="pull-left company-detail">
+                    <div class="company-name">
+                        湖南艾瓦特网络科技有限公司
+                    </div>
+                    <div class="company-status clearfix">
+                        <div class="pull-left status-d">
+                            <div class="status-run">运行状态</div>
+                            <div class="status">正常</div>
+                        </div>
+                        <div class="pull-right times-d">
+                            <div class="login-t">上次登录时间</div>
+                            <div class="times">2016-11-30 11:13:05</div>
+                        </div>
+                    </div>
+                    <div class="domain clearfix">
+                        <div class="pull-left domain-a">
+                            <a href="#">未绑定域名，点击绑定域名</a>
+                        </div>
+                        <div class="pull-left domain-b">
+                            <a href="#" class="a-common">预览</a>
+                        </div>
+                        <div class="pull-right domain-c">
+                            <a class="a-common" href="#">
+                                <img src="../static/images/u4.png" alt="u4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pull-right setting">
+                    <div class="setting-list">
+                        <a href="#">
+                            <div class="setting-list-sit">
+                                <div class="setting-i">
+                                    <img src="../static/images/u1.png" alt="">
+                                </div>
+                                <div class="setting-t">站点设置</div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="setting-list-editor">
+                                <div class="setting-i">
+                                    <img src="../static/images/u3.png" alt="">
+                                </div>
+                                <div class="setting-t">站点编辑</div>
+                            </div>
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#publishSuccessModal">
+                            <div class="setting-list-publish">
+                                <div class="setting-i">
+                                    <img src="../static/images/u2.png" alt="">
+                                </div>
+                                <div class="setting-t">发布站点</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</section>
+	<!--/content-->
+
+    <!--modal-primary-->
+    <div class="modal fade modal-primary" id="publishSuccessModal" tabindex="-1" role="dialog" aria-labelledby="primary-modal-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal container-sm-fluid p-0" id="form-1" action="">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">发布成功</h4>
+                    </div>
+                    <div class="modal-body pl-0 pr-0">
+                        <div class="img-wrapper">
+
+                        </div>
+                        <div class="domain-wrapper p-15">
+                            <div class="domain-control">
+                                <a href="#" class="domain-control-btn"><span class="fa fa-chevron-left"></span></a>
+                                <a href="#" class="domain-control-btn"><span class="fa fa-refresh"></span></a>
+                                <div class="input-group domain-inputer">
+                                    <input type="text" class="form-control" placeholder="请输入广告主域名" value="Sanygroup.com">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-warning" type="button">
+                                            浏览站点
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="publishSuccess" class="hide">
+                                <p class="pt-10 mb-0">
+                                    您还可以 <a href="#">绑定顶级域名</a> 来访问您的站点。
+                                </p>
+                            </div>
+                            <div id="publishFail">
+                                <p class="pt-10 text-danger">
+                                    当前站点绑定的顶级域名不可访问，您可暂时通过我们提供的二级域名访问站点。
+                                </p>
+                                <p>1.请确定您绑定的顶级域名的『网站备案』是否成功。</p>
+                                <p>2.请确定确定您的『域名解析』是否指向您的IP地址。</p>
+                                <p>3.上述操作正确，您可以尝试重新发布站点</p>
+                                <p>4.如上述操作仍无法访问，您可提交工单，我们将尽快帮您解决。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-outline" data-dismiss="modal">关闭</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--/modal-primary-->
+
+    <div class="modal fade modal-primary" id="qrcodeModal" tabindex="-1" role="dialog" aria-labelledby="primary-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <form class="form-horizontal container-sm-fluid p-0" id="form-1" action="">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">预览站点</h4>
+                    </div>
+                    <div class="modal-body pl-0 pr-0">
+                        <div class="img-wrapper">
+                            <div id="qrcode">
+
+                            </div>
+                        </div>
+                        <p>扫描二维码预览站点</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--/content-wrapper-->
+<!-- Script -->
+<script src="../lib/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/dist/js/app.min.js"></script>
+<script src="../lib/dist/js/ivt.js"></script>
+<script src="../lib/dist/js/jquery.qrcode.min.js"></script>
+</body>
+</html>

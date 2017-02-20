@@ -1,0 +1,144 @@
+//建站右边页面
+.cloud-right-container{
+    padding: 20px;
+    .cloud-message{
+        padding-bottom: 15px;
+        .cloud-text{
+            font-size: 18px;
+            color: #444444;
+        }
+    }
+    .box-primary{
+        border-top: 3px solid #F2A654;
+        .box-left,.box-right{
+            width: 50%;
+            height: inherit;
+        }
+    }
+    .box-company{
+        height: 425px;
+        .box-left{
+            position: relative;
+            img{
+                position: absolute;
+                margin: auto;
+                bottom: 2px;
+                left: 0;
+                right: 0;
+            }
+        }
+        .box-right{
+            .company-detail{
+                width: 320px;
+                .company-name{
+                    font-size: 24px;
+                    margin-top: 100px;
+                }
+                .company-status{
+                    margin-top: 30px;
+                }
+                .domain{
+                    margin-top: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    .domain-a{
+                        background-color: #F2F2F2;
+                        padding-left: 10px;
+                        padding-right: 20px;
+                        a{
+                            text-decoration: underline;
+                        }
+                    }
+                    .domain-b{
+                        background-color: #00C0EF;
+                        width: 70px;
+                        color: #FFF5F9;
+                        text-align: center;
+                    }
+                    .domain-c{
+                        width: 40px;
+                        background-color: #00C0EF;
+                        text-align: center;
+                    }
+                }
+                .status-d{
+                    border-left: 1px solid #AF999C;
+                    padding-left: 8px;
+                    .status-run{
+                        color: #AF999C;
+                        font-size: 14px;
+                    }
+                    .status{
+                        color: #F2A654;
+                    }
+                }
+                .times-d{
+                    border-left: 1px solid #AF999C;
+                    padding-left: 8px;
+                    .login-t{
+                        color: #AF999C;
+                        font-size: 14px;
+                    }
+                    .times{
+                        color: #AF999C;
+                    }
+                }
+            }
+            .setting-list{
+                width: 145px;
+                height: 422px;
+                text-align: center;
+                a{
+                    color: inherit;
+                }
+                .setting-i{
+                    padding-top: 40px;
+                }
+                .setting-t{
+                    margin-top: 10px;
+                }
+                .setting-list-sit{
+                    height: 33.3%;
+                    border: 1px solid #999999;
+                    border-top: none;
+                }
+                .setting-list-editor{
+                    height: 33.3%;
+                    border-left: 1px solid #999999;
+                    border-right: 1px solid #999999;
+                }
+                .setting-list-publish{
+                    height: 33.33%;
+                    border: 1px solid #999999;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+.img-wrapper {
+    height: 180px;
+    background: rgb(236, 240, 245);
+}
+.domain-control {
+    height: 50px;
+    padding:6px;
+    background: rgb(236, 240, 245);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 2px;
+    span.fa {
+        font-size: 22px;
+        line-height: 37px;
+    }
+    a.domain-control-btn {
+        display: inline-block;
+        width: 9%;
+        text-align: center;
+        line-height: 37px;
+        color: rgb(156, 156, 156);
+    }
+    .domain-inputer {
+        width: 80%;
+        float: right;
+    }
+}

@@ -1,0 +1,521 @@
+/*-------------------------------------
+zTree Style using fontawesome instead of images
+
+version:    1.1
+author:     Mike King
+email:      mikkelking @ hotmail . com
+website:    http://code.google.com/p/jquerytree/
+
+-------------------------------------*/
+/* Definitions ----------------------*/
+/* End of Definitions ---------------*/
+/* Imports  -------------------------*/
+/* End of Imports  ------------------*/
+/* line 37, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000337}}
+.ztree * {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-family: Verdana, Arial, Helvetica, AppleGothic, sans-serif;
+}
+/* line 38, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000338}}
+.ztree {
+  margin: 0;
+  padding: 5px;
+  color: #4f4b4c;
+}
+/* line 40, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000340}}
+.ztree li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 23px;
+  text-align: left;
+  white-space: nowrap;
+  outline: 0;
+}
+/* line 42, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000342}}
+.ztree li ul {
+  margin: 0px;
+  padding: 0 0 0 18px;
+}
+/* line 46, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000346}}
+.ztree li a {
+  padding-right: 3px;
+  margin: 0;
+  cursor: pointer;
+  height: 23px;
+  color: #4f4b4c;
+  background-color: transparent;
+  text-decoration: none;
+  vertical-align: top;
+  display: inline-block;
+}
+/* line 48, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000348}}
+.ztree li a input.rename {
+  height: 14px;
+  width: 80px;
+  padding: 0;
+  margin: 0;
+  color: #f7f7f7;
+  background-color: #4f4b4c;
+  font-size: 14px;
+  border: 1px #585956 solid;
+  *border: 0px;
+}
+/* line 52, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000352}}
+.ztree li a:hover {
+  text-decoration: underline;
+}
+/* line 53, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000353}}
+.ztree li a.curSelectedNode {
+  padding-top: 0px;
+  background-color: #f4f4f4;
+  color: #6b9d32;
+  height: 23px;
+  opacity: 0.8;
+}
+/* line 54, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000354}}
+.ztree li a.curSelectedNode_Edit {
+  padding-top: 0px;
+  background-color: transparent;
+  color: #6b9d32;
+  height: 23px;
+  border: 1px #666 solid;
+  opacity: 0.8;
+}
+/* line 55, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000355}}
+.ztree li a.tmpTargetNode_inner {
+  padding-top: 0px;
+  background-color: #aaa;
+  color: #6b9d32;
+  height: 23px;
+  border: 1px #666 solid;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+/* line 59, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000359}}
+.ztree li span {
+  line-height: 23px;
+  margin-right: 2px;
+  background-color: transparent;
+}
+/* line 60, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000360}}
+.ztree li span.button {
+  line-height: 0;
+  margin: 0;
+  margin-right: 5px;
+  padding: 0;
+  width: 17px;
+  height: 23px;
+  line-height: 4px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  font-size: 14px;
+  border: 0px solid;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+/* line 64, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000364}}
+.ztree li span.button::before {
+  color: #4f4b4c;
+  font-family: FontAwesome;
+  padding-top: 10px;
+}
+/* line 65, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000365}}
+.ztree li span.button.chk {
+  margin: 0px;
+  cursor: auto;
+  width: 12px;
+  display: inline-block;
+  padding-top: 10px;
+  padding-left: 0;
+}
+/* line 68, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000368}}
+.ztree li span.button.chk.checkbox_false_full::before {
+  content: "\f096";
+}
+/* line 69, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000369}}
+.ztree li span.button.chk.checkbox_false_full_focus::before {
+  content: "\f096";
+  color: #6b9d32;
+}
+/* line 70, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000370}}
+.ztree li span.button.chk.checkbox_false_part::before {
+  content: "\f096";
+  color: #aaaaaa;
+}
+/* line 71, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000371}}
+.ztree li span.button.chk.checkbox_false_part_focus::before {
+  content: "\f096";
+  color: #cad96c;
+}
+/* line 72, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000372}}
+.ztree li span.button.chk.checkbox_false_disable::before {
+  content: "\f096";
+  color: #808080;
+}
+/* line 73, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000373}}
+.ztree li span.button.chk.checkbox_true_full::before {
+  content: "\f046";
+}
+/* line 74, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000374}}
+.ztree li span.button.chk.checkbox_true_full_focus::before {
+  content: "\f046";
+}
+/* line 75, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000375}}
+.ztree li span.button.chk.checkbox_true_part::before {
+  content: "\f14a";
+}
+/* line 76, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000376}}
+.ztree li span.button.chk.checkbox_true_part_focus::before {
+  content: "\f14a";
+  color: #6b9d32;
+}
+/* line 77, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000377}}
+.ztree li span.button.chk.checkbox_true_full_focus::before {
+  content: "\f046";
+  color: #6b9d32;
+}
+/* line 78, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000378}}
+.ztree li span.button.chk.checkbox_true_part::before {
+  content: "\f046";
+  color: #aaaaaa;
+}
+/* line 79, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000379}}
+.ztree li span.button.chk.checkbox_true_part_focus::before {
+  content: "\f046";
+  color: #cad96c;
+}
+/* line 80, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000380}}
+.ztree li span.button.chk.checkbox_true_disable::before {
+  content: "\f046";
+  color: #808080;
+}
+/* line 82, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000382}}
+.ztree li span.button.chk.radio_false_full::before {
+  content: "\f10c";
+}
+/* line 83, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000383}}
+.ztree li span.button.chk.radio_false_full_focus::before {
+  content: "\f10c";
+  color: #6b9d32;
+}
+/* line 84, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000384}}
+.ztree li span.button.chk.radio_false_part::before {
+  content: "\f10c";
+  color: #aaaaaa;
+}
+/* line 85, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000385}}
+.ztree li span.button.chk.radio_false_part_focus::before {
+  content: "\f10c";
+  color: #6b9d32;
+}
+/* line 86, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000386}}
+.ztree li span.button.chk.radio_false_disable::before {
+  content: "\f1db";
+  color: #808080;
+}
+/* line 87, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000387}}
+.ztree li span.button.chk.radio_true_full::before {
+  content: "\f192";
+}
+/* line 88, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000388}}
+.ztree li span.button.chk.radio_true_full_focus::before {
+  content: "\f192";
+  color: #6b9d32;
+}
+/* line 89, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000389}}
+.ztree li span.button.chk.radio_true_part::before {
+  content: "\f192";
+  color: #aaaaaa;
+}
+/* line 90, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000390}}
+.ztree li span.button.chk.radio_true_part_focus::before {
+  content: "\f192";
+  color: #aaaaaa;
+}
+/* line 91, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000391}}
+.ztree li span.button.chk.radio_true_disable::before {
+  content: "\f1db";
+  color: #808080;
+}
+/* line 94, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000394}}
+.ztree li span.button.switch {
+  width: 17px;
+  height: 23px;
+  font-size: 14px;
+}
+/* line 95, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000395}}
+.ztree li span.button.root_open::before {
+  content: "\f107";
+  padding-top: 10px;
+  padding-left: 0;
+  display: inline-block;
+}
+/* line 96, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000396}}
+.ztree li span.button.root_close::before {
+  content: "\f115";
+  padding-top: 10px;
+  padding-left: 0;
+  display: inline-block;
+}
+/* line 97, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000397}}
+.ztree li span.button.roots_open::before {
+  content: "\f107";
+  padding-top: 10px;
+  padding-left: 0;
+  display: inline-block;
+}
+/* line 98, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000398}}
+.ztree li span.button.roots_close::before {
+  content: "\f105";
+  padding-top: 10px;
+  padding-left: 0;
+  display: inline-block;
+}
+/* line 99, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\0000399}}
+.ztree li span.button.center_open::before {
+  content: "\f107";
+  padding-top: 10px;
+  padding-left: 0;
+  display: inline-block;
+}
+/* line 100, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003100}}
+.ztree li span.button.center_close::before {
+  content: "\f105";
+  padding-top: 10px;
+  padding-left: 0;
+  display: inline-block;
+}
+/* line 101, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003101}}
+.ztree li span.button.bottom_open::before {
+  content: "\f107";
+  padding-top: 10px;
+  padding-left: 0;
+  display: inline-block;
+}
+/* line 102, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003102}}
+.ztree li span.button.bottom_close::before {
+  content: "\f105";
+  padding-top: 10px;
+  padding-left: 0;
+  display: inline-block;
+}
+/* line 105, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003105}}
+.ztree li span.button.root_docu {
+  background: none;
+}
+/* line 106, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003106}}
+.ztree li span.button.roots_docu::before {
+  content: "\f0f6";
+  padding-left: 0;
+  display: inline-block;
+  color: #4f4b4c;
+}
+/* line 107, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003107}}
+.ztree li span.button.center_docu::before {
+  padding-top: 10px;
+  padding-left: 0;
+  display: inline-block;
+  color: #4f4b4c;
+}
+/* line 108, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003108}}
+.ztree li span.button.bottom_docu::before {
+  padding-top: 10px;
+  padding-left: 0;
+  display: inline-block;
+  color: #4f4b4c;
+}
+/* line 109, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003109}}
+.ztree li span.button.noline_docu {
+  background: none;
+}
+/* line 111, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003111}}
+.ztree li span.button.ico_open::before {
+  content: "\f115";
+  font-family: FontAwesome;
+  padding-top: 10px;
+  padding-left: 0;
+  display: inline-block;
+  color: #4f4b4c;
+}
+/* line 112, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003112}}
+.ztree li span.button.ico_close::before {
+  content: "\f114";
+  font-family: FontAwesome;
+  padding-top: 10px;
+  padding-left: 0;
+  display: inline-block;
+  color: #4f4b4c;
+}
+/* line 113, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003113}}
+.ztree li span.button.ico_docu::before {
+  content: "\f0f6";
+  font-family: FontAwesome;
+  padding-top: 10px;
+  padding-left: 0;
+  display: inline-block;
+  color: #4f4b4c;
+}
+/* line 115, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003115}}
+.ztree li span.button.edit {
+  margin-left: 4px;
+  margin-right: -1px;
+  vertical-align: top;
+  *vertical-align: middle;
+  padding-top: 10px;
+}
+/* line 116, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003116}}
+.ztree li span.button.edit::before {
+  content: "\f044";
+  font-family: FontAwesome;
+}
+/* line 118, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003118}}
+.ztree li span.button.remove {
+  margin-left: 4px;
+  margin-right: -1px;
+  vertical-align: top;
+  *vertical-align: middle;
+  padding-top: 10px;
+}
+/* line 119, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003119}}
+.ztree li span.button.remove::before {
+  content: "\f1f8";
+  font-family: FontAwesome;
+}
+/* line 122, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003122}}
+.ztree li span.button.add {
+  margin-left: 4px;
+  margin-right: -1px;
+  vertical-align: top;
+  *vertical-align: middle;
+  padding-top: 10px;
+}
+/* line 123, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003123}}
+.ztree li span.button.add::before {
+  content: "\f067";
+  font-family: FontAwesome;
+}
+/* line 125, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003125}}
+.ztree li span.button.ico_loading {
+  margin-right: 2px;
+  background: url(img/loading.gif) no-repeat scroll 0 0 transparent;
+  vertical-align: top;
+  *vertical-align: middle;
+}
+/* line 132, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003132}}
+ul.tmpTargetzTree {
+  background-color: #FFE6B0;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+/* line 135, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003135}}
+span.tmpzTreeMove_arrow {
+  width: 16px;
+  height: 23px;
+  display: inline-block;
+  padding: 0;
+  margin: 2px 0 0 1px;
+  border: 0 none;
+  position: absolute;
+  background-color: transparent;
+  background-attachment: scroll;
+}
+/* line 139, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003139}}
+span.tmpzTreeMove_arrow::before {
+  content: "\f04b";
+  font-family: FontAwesome;
+  color: #6b9d32;
+}
+/* line 143, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003143}}
+ul.ztree.zTreeDragUL {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  background-color: #cfcfcf;
+  border: 1px #6b9d32 dotted;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+/* line 145, awesome.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Sim\/Desktop\/MFrame\/Sim\/frame\/core\/plugins\/ztree\/awesomeStyle\/awesome\.less}line{font-family:\00003145}}
+.ztreeMask {
+  z-index: 10000;
+  background-color: #cfcfcf;
+  opacity: 0.0;
+  filter: alpha(opacity=0);
+  position: absolute;
+}

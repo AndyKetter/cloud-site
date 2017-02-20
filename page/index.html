@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>云 ▪ 建站通</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+<!--Style-->
+<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/AdminLTE.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/skins/skin-ivt-light.min.css">
+<link rel="stylesheet" href="../static/css/init.css">
+<!--[if lt IE 9]>
+<script src="../lib/dits/js/html5shiv.min.js"></script>
+<script src="../lib/dits/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="hold-transition skin-ivt-light sidebar-mini frame-fixed" style="overflow-y: hidden;">
+<!--wrapper-->
+<div class="wrapper">
+
+ 	<!--main-header-->
+ 	<header class="main-header">
+
+ 	    <!--logo-->
+ 	    <a href="#" class="logo">
+ 	    	<span class="logo-lg">云 ▪ 建站通</span>
+ 	    	<span class="logo-mini">site</span>
+ 	    </a>
+ 	    <!--/logo-->
+
+ 	    <!--navbar-->
+ 	    <nav class="navbar navbar-static-top" role="navigation">
+ 	    	<!--sidebar-toggle-->
+ 	    	<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+		    	<span class="sr-only">Toggle navigation</span>
+		    </a>
+ 	    	<!--/sidebar-toggle-->
+            <!-- <div class="pull-left back-btn">
+                <img src="../static/images/back.png" alt="">返回商贸通
+            </div> -->
+ 	    	<!--navbar-custom-menu-->
+ 	        <div class="navbar-custom-menu">
+				<ul class="nav navbar-nav">
+					<!-- <li class="dropdown messages-menu">
+						<a href="#">
+							<i class="fa fa-envelope-o"></i>
+							<span class="label label-success">4</span>
+						</a>
+					</li> -->
+					<li class="dropdown user user-menu dropdown-sm">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<img src="../static/images/uesr.png" class="user-image-icon" alt="User Image">
+							<span class="hidden-xs">zhongpeng@idvert.com</span>
+              <img src="../static/images/down.png" class="down-icon" alt="User Image">
+						</a>
+						<ul class="dropdown-menu w-sm p-5 pl-0 pr-0" role="menu" aria-labelledby="dropdownMenu1">
+							<!--<li role="presentation"><a role="menuitem" tabindex="-1" href="#">创意中心</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">监测中心</a></li>
+							<li role="presentation" class="divider"></li>-->
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">注销</a></li>
+						</ul>
+					</li>
+				</ul>
+ 	        </div>
+ 	    	<!--navbar-custom-menu-->
+ 	    </nav>
+ 	    <!--/navbar-->
+
+ 	</header>
+ 	<!--/main-header-->
+
+	<!--main-sidebar-->
+	<aside class="main-sidebar">
+		<section class="sidebar">
+			<!--sidebar-menu-->
+		    <ul class="sidebar-menu">
+				<!--<li class="header"></li>-->
+				<li class="active"><a href="#"><i class="fa fa-dashboard"></i><span>站点概况</span></a></li>
+				<li class=""><a href="#"><i class="fa fa-cog"></i><span>站点设置</span></a></li>
+				<li class=""><a href="#"><i class="fa fa-globe"></i><span>域名管理</span></a></li>
+				<li class=""><a href="#"><i class="fa fa-edit"></i><span>询单管理</span></a></li>
+		    </ul>
+			<!--/sidebar-menu-->
+		</section>
+	</aside>
+	<!--/main-sidebar-->
+
+	<!--content-wrapper-->
+	<div class="content-wrapper">
+		<iframe src="./navigation-manage.html" class="content-frame" width="100%" height="100%" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="yes" allowtransparency="yes"></iframe>
+	</div>
+	<!--/content-wrapper-->
+
+	<!--main-footer-->
+	<footer class="main-footer">
+		<div class="pull-right hidden-xs">iDvert Frame ver 1.0</div>
+		<strong>Copyright &copy; 2016 <a href="#">iDvert</a>.</strong> All rights reserved.
+	</footer>
+	<!--/main-footer-->
+</div>
+<!--/wrapper-->
+
+<!-- Button trigger modal -->
+<div class="modal fade modal-warning bs-example-modal-lg" id="warning-modal" tabindex="-1" role="dialog" aria-labelledby="warning-modal-label" aria-hidden="true" style="display: none;">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title" id="myModalLabel">填写站点信息</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal" role="form" action="test.php" method="get">
+				  <div class="form-group">
+				    <label class="col-sm-2 control-label" for="site-name">站点名称</label>
+				    <div class="col-sm-10">
+				      <input class="form-control" type="text" id="site-name" placeholder="">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label class="col-sm-2 control-label" for="site-domain">站点域名</label>
+					<div class="input-group col-sm-9" style="padding-left:15px;width: 81.7%;">
+			          <input class="form-control" type="text" id="site-domain" placeholder="">
+					  <div class="input-group-addon">cloudsite.net</div>
+			        </div>
+				  </div>
+				  <div class="form-group" style="border-top: 1px solid #ddd;padding-top: 15px;">
+				    <label class="col-sm-2 control-label" for="company-name">公司名称</label>
+				    <div class="col-sm-10">
+				      <input class="form-control" type="text" id="company-name" placeholder="">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label class="col-sm-2 control-label" for="linkman">联系人</label>
+				    <div class="col-sm-10">
+				      <input class="form-control" type="text" id="linkman" placeholder="">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label class="col-sm-2 control-label" for="phone-name">联系电话</label>
+				    <div class="col-sm-10">
+				      <input class="form-control" type="text" id="phone-name" placeholder="">
+				    </div>
+				  </div>
+				  <input type="hidden" id="JS_inpt" name="template" value="">
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-info" id="JS-submit">确定</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Script -->
+<script src="../lib/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/dist/js/app.js"></script>
+<script src="../lib/dist/js/ivt.js"></script>
+</body>
+</html>

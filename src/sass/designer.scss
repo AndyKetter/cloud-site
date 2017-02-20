@@ -1,0 +1,234 @@
+.tabPlugin{
+    height: 750px;
+    padding: 15px;
+}
+.tabPlugin .tabContainer{
+    padding: 0 15px;
+}
+#warning-modal{
+    >.modal-dialog{
+        min-width: 1200px;
+    }
+    .modal-body{
+        padding: 0;
+    }
+}
+#JS-save-success{
+    .modal-footer{
+        text-align: right;
+    }
+}
+.nav-tabs-custom>.tab-content{
+    padding: 0;
+}
+.form-horizontal .form-group{
+    margin-right: 0;
+    margin-left: 0;
+}
+.modal-warning .modal-header {
+    border-top-color: #F2A654;
+}
+.active>a{
+    background-color: #fff !important;
+    border-bottom: 2px solid #F2A654;
+}
+.nav-pills{
+    border-bottom: 1px solid #e4eaec;
+    padding-left: 30px;
+}
+#tab_2{
+    padding: 20px;
+}
+.editor{
+    padding: 50px 10px;
+}
+.container-d{
+    .container-fluid{
+        padding: 0;
+    }
+}
+.upload{
+    height: 410px;
+    overflow-y: auto;
+    #upload{ margin:0 auto; min-height:400px; background:#F0F0F0;padding: 20px;box-shadow: 0 0 20px #ddd;}
+}
+.img-container{
+    .img-list{
+        overflow: auto;
+        height: 340px;
+        padding: 20px;
+        background-color: #FFF;
+        box-shadow: 0 0 20px #ddd;
+    }
+}
+.main-footer{
+    margin-left: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.designer-head{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+    // line-height: 50px;
+    background-color: #FFFFFF;
+    .d-select{
+        position: relative;
+        height: inherit;
+        width: 200px;
+        margin-top: 8px;
+        margin-left: 20px;
+        #JS_select{
+            position: absolute;
+            width: 167px;
+            height: 34px;
+            left: 32px;
+            cursor: pointer;
+        }
+        .copy-icon{
+            width: 32px;
+            height: 34px;
+            line-height: 34px;
+            text-align: center;
+            background: #F7F7F7 url('../images/copy.png') center no-repeat;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        select{
+            width: 167px;
+        }
+        .ship-list{
+            display: none;
+            position: absolute;
+            top: 38px;
+            width: 320px;
+            min-height: 470px;
+            z-index: 99;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            .create-page{
+                border-bottom: 1px solid #ddd;
+                height: 55px;
+                .create-page-btn{
+                    margin-top: 3.5px;
+                }
+                button{
+                    width: 300px;
+                    height: 48px;
+                }
+            }
+            .drap-list{
+                padding: 5px 10px;
+                .dd3-content{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .d-logo{
+        width: 50px;
+        height: 50px;
+        background: #F2A654 url('../images/d-logo.png') center no-repeat;
+        cursor: pointer;
+    }
+    .d-r{
+        height: inherit;
+        border-right: 1px solid #ddd;
+        margin-right: 10px;
+        padding-right: 10px;
+        .d-c{
+            width: 25px;
+            height: 25px;
+            border-radius: 3px;
+            margin-top: 12.5px;
+            cursor: pointer;
+        }
+        .d-white{
+            background-color: #ffffff;
+            border: 3px solid #F2A654;
+            margin-right: 10px;
+        }
+        .d-black{
+            background-color: black;
+        }
+    }
+    .d-b{
+        height: inherit;
+        .d-btn{
+            width: 90px;
+            height: 30px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            line-height: 30px;
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+            img{
+                position: relative;
+                right: 5px;
+                bottom: 1px;
+            }
+        }
+        .d-save{
+            margin-left: 10px;
+            margin-right: 10px;
+            color: #F2A654;
+            border: 1px solid #F2A654;
+        }
+        .d-preview{
+            color: #9ECE67;
+            border: 1px solid #9ECE67;
+        }
+    }
+}
+
+.modal-body{
+    .tab-content{
+        .page-template{
+            height: 250px;
+            border-bottom: 1px solid #e4eaec;
+            .template-list{
+                margin-left: 18px;
+                margin-top: 10px;
+                overflow: hidden;
+                height: 190px;
+                position: relative;
+                z-index: 2;
+                .t-wrap{
+                    width: 300%;
+                    height: 190px;
+                    transition: margin-left 1s;
+                    -moz-transition: margin-left 1s;	/* Firefox 4 */
+                    -webkit-transition: margin-left 1s;	/* Safari 和 Chrome */
+                    -o-transition: margin-left 1s;	/* Opera */
+                }
+                .template-list-img{
+                    border: 2px solid #F2A654;
+                    margin-right: 19px;
+                }
+            }
+            .control-icon{
+                .icon-sp{
+                    display: inline-block;
+                    background-color: #EEEEEE;
+                    width: 30px;
+                    height: 5px;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    &.active{
+                        background-color: #F2A654;
+                    }
+                }
+            }
+        }
+    }
+    .page-from{
+        .page-name{
+            border-bottom: 1px solid #e4eaec;
+        }
+    }
+}

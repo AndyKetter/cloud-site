@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>询单管理</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+<!--Style-->
+<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/AdminLTE.min.css" />
+<link rel="stylesheet" href="../lib/dist/css/skins/skin-ivt-light.min.css">
+<link rel="stylesheet" href="../static/css/init.css">
+<link rel="stylesheet" href="../static/css/site-setting.css">
+<!--[if lt IE 9]>
+<script src="../lib/dits/js/html5shiv.min.js"></script>
+<script src="../lib/dits/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="hold-transition skin-ivt-light sidebar-mini">
+<!--content-wrapper-->
+	<!--content-header-->
+	<section class="content-header">
+		<!--content-header-title-->
+		<h1>域名管理</h1>
+		<!--/content-header-title-->
+
+		<!---breadcrumb-->
+		<ol class="breadcrumb">
+			<li> 当前位置</li>
+			<li><a href="#"> 控制面板</a></li>
+			<li><a href="#"> 询单管理</a></li>
+			<li class="active"><a href="#"> 询单列表</a></li>
+		</ol>
+		<!---/breadcrumb-->
+	</section>
+	<!--/content-header-->
+
+	<!--content-->
+	<section class="content cloud-right-container p-15">
+        <div class="box box-primary box-company">
+            <div class="box-header b-b clearfix">
+                <h3 class="box-title pull-left lh-md">询单列表</h3>
+                <form class="form-inline">
+                    <div class="form-group ml-20">
+                        <select name="source" id="" class="form-control w-sm">
+                            <option value="0">询单源</option>
+                        </select>
+                    </div>
+                    <div class="form-group ml-10">
+                        <select name="source" id="" class="form-control w-sm">
+                            <option value="0">显示列</option>
+                        </select>
+                    </div>
+                    <div class="form-group ml-10">
+                        <div class="input-group">
+                            <input type="text" class="form-control pull-right" id="reservation">
+                            <div class="input-group-addon">
+                                <i class="fa fa-search " style="cursor: pointer;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="box-body pl-0 pr-0">
+                <table class="table table-hasbtn table-hover">
+                    <thead>
+                        <tr>
+                            <th class="pl-15">
+                                <input type="checkbox" id="checkAll" />
+                            </th>
+                            <th>
+                                ID
+                            </th>
+                            <th>联系人</th>
+                            <th>公司</th>
+                            <th>邮箱</th>
+                            <th>电话</th>
+                            <th class="hide">内容</th>
+                            <th class="hide">扩展一</th>
+                            <th class="hide">扩展二</th>
+                            <th class="hide">扩展三</th>
+                            <th>发布日期</th>
+                            <th style="width:150px;" class="text-center">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="b-b b-t">
+                        <tr>
+                            <td class="pl-15">
+                                <input type="checkbox" id="check1" />
+                            </td>
+                            <td class="dataId">31</td>
+                            <td class="dataName">虫鸣咻咻</td>
+                            <td class="dataCompany">艾瓦特</td>
+                            <td class="dataEmail">cmxx@163.com</td>
+                            <td class="dataPhone">188888888888</td>
+                            <td class="dataContent hide">如何加盟，请发个具体的加盟文档...</td>
+                            <td class="dataExtra1 hide">如何加盟，请发个具体的加盟文档...</td>
+                            <td class="dataExtra2 hide">如何加盟，请发个具体的加盟文档...</td>
+                            <td class="dataExtra3 hide">如何加盟，请发个具体的加盟文档...</td>
+                            <td class="dataTime">2017-06-22 15:13:48</td>
+                            <td class="text-center">
+                                <button class="btn btn-danger btn-sm mr-10" data-whatever="0">删除</button>
+                                <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#enquiryDetailModal" data-whatever="0">详情</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pl-15">
+                                <input type="checkbox" id="check1" />
+                            </td>
+                            <td class="dataId">31</td>
+                            <td class="dataName">虫鸣咻咻111112122112</td>
+                            <td class="dataCompany">cmxx@163.com</td>
+                            <td class="dataEmail">如何加盟，请发个具体的加盟文档...</td>
+                            <td class="dataPhone">如何加盟，请发个具体的加盟文档...</td>
+                            <td class="dataContent hide">如何加盟，请发个具体的加盟文档...</td>
+                            <td class="dataExtra1 hide">如何加盟，请发个具体的加盟文档...</td>
+                            <td class="dataExtra2 hide">如何加盟，请发个具体的加盟文档...</td>
+                            <td class="dataExtra3 hide">如何加盟，请发个具体的加盟文档...</td>
+                            <td class="dataTime">2016-06-22 15:13:48</td>
+                            <td class="text-center">
+                                <button class="btn btn-danger btn-sm mr-10" data-whatever="0">删除</button>
+                                <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#enquiryDetailModal" data-whatever="0">详情</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="clearfix p-10">
+                    <div class="pull-left">
+                        <button class="btn btn-danger btn-outline pl-20 pr-20">删除</button>
+                    </div>
+                    <div class="pull-right">
+                        <ul class="pagination separated">
+                            <li class="disabled"><a href="#fakelink">首页</a></li>
+                            <li class="disabled"><a href="#fakelink">上一页</a></li>
+                            <li class="active"><a href="#fakelink">1</a></li>
+                            <li><a href="#fakelink">2</a></li>
+                            <li><a href="#fakelink">3</a></li>
+                            <li><a href="#fakelink">...</a></li>
+                            <li><a href="#fakelink">15</a></li>
+                            <li><a href="#fakelink">下一页</a></li>
+                            <li><a href="#fakelink">尾页</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</section>
+	<!--/content-->
+
+    <!--modal-primary-->
+    <div class="modal fade modal-primary" id="enquiryDetailModal" tabindex="-1" role="dialog" aria-labelledby="primary-modal-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal container-sm-fluid p-0" id="form-1" action="">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">询单详情</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row pt-15">
+                            <div class="form-group">
+                                <label class="col-sm-3 text-minu text-right pr-20">联系人:</label>
+                                <div class="col-sm-7" id="name">
+                                    
+                                </div>
+                                <div class="col-sm-2">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 text-minu text-right pr-20">公司:</label>
+                                <div class="col-sm-7" id="company">
+                                    
+                                </div>
+                                <div class="col-sm-2">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 text-minu text-right pr-20">邮箱:</label>
+                                <div class="col-sm-7" id="email">
+                                    
+                                </div>
+                                <div class="col-sm-2">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 text-minu text-right pr-20">电话:</label>
+                                <div class="col-sm-7" id="phone">
+                                    
+                                </div>
+                                <div class="col-sm-2">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 text-minu text-right pr-20">内容:</label>
+                                <div class="col-sm-7" id="content">
+                                    
+                                </div>
+                                <div class="col-sm-2">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 text-minu text-right pr-20">发布日期:</label>
+                                <div class="col-sm-7" id="createTime">
+                                    
+                                </div>
+                                <div class="col-sm-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-outline" data-dismiss="modal">关闭</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--/modal-primary-->
+
+<!-- Script -->
+<script src="../lib/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/dist/js/app.min.js"></script>
+<script src="../lib/dist/js/ivt.js"></script>
+<script>
+    $('#enquiryDetailModal').on('show.bs.modal', function (e) {
+        var obj = $(e.relatedTarget), 
+            trObj = obj.parent().parent(),
+            name = trObj.find('.dataName').text(),
+		    company = trObj.find('.dataCompany').text(),
+		    email = trObj.find('.dataEmail').text(),
+		    phone = trObj.find('.dataPhone').text(),
+		    content = trObj.find('.dataContent').text(),
+		    extra1 = trObj.find('.dataExtra1').text(),
+		    extra2 = trObj.find('.dataExtra2').text(),
+		    extra3 = trObj.find('.dataExtra3').text(),
+		    createTime = trObj.find('.dataTime').text();
+        
+        $('#name').html(name);
+        $('#company').html(company);
+        $('#email').html(email);
+        $('#phone').html(phone);
+        $('#content').html(content);
+        $('#createTime').html(createTime);
+    })
+</script>
+</body>
+</html>
